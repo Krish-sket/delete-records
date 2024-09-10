@@ -9,9 +9,10 @@ var connection = mysql.createConnection({
 connection.connect((err => {
     if (err) throw err;
     console.log("DB connected");
-    var sql = "DELETE FROM Students WHERE Student_ID=101";
+    var sql = "INSERT INTO users (name, email) VALUES ('John Doe', 'johndoe@example.com')";
+    var values = ['John Doe', 'johndoe@example.com']
     connection.query(sql, function (err, result) {
         if (err) throw err;
-        console.log("Data Deleted");
+        console.log("Inserted new row");
     });
 }));
