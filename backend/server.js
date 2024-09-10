@@ -17,6 +17,6 @@ connection.connect((err => {
     ];
     connection.query(sql, function (err, result) {
         if (err) throw err;
-        console.log("Inserted new row");
+        console.log("Inserted multiple new row");
     });
 }));
